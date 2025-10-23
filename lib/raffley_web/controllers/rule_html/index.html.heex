@@ -1,8 +1,18 @@
-<h1 class="text-xl font-extrabold">The rules</h1>
-<p class="mt-4">
+<div class="rules">
+<h1>The rules</h1>
+<p>
 <%= @emojis%>
 </p>
-
+<ol>
+    <%=  for rule <- @rules do %>
+    <li><%= rule.text %></li>
+    <% end %>
+</ol>
+</div>
+<br>
+<br>
+<br>
+<br>
 <pre>
 <%= inspect(@conn, pretty: true) %>
 </pre>
